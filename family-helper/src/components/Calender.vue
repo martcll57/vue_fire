@@ -316,32 +316,6 @@ export default {
 
             if(birthdayCheck)
             { 
-				// var sDate = new Date(this.newEventStartDate)
-				// var sHours = this.newEventStartTime.split(':')[0]
-				// var sMinutes = this.newEventStartTime.split(':')[1]
-
-				// if(sHours){
-				// 	sDate.setHours(sHours);
-				// 	sDate.setMinutes(sMinutes);
-				// }
-				// else{
-				// 	sDate.setHours('0');
-				// 	sDate.setMinutes('00');
-				// }
-				
-				// var eDate = new Date(this.newEventEndDate);
-				// var eHours = this.newEventEndTime.split(':')[0]
-				// var eMinutes = this.newEventEndTime.split(':')[1]
-
-				// if(eHours){
-				// 	eDate.setHours(eHours);
-				// 	eDate.setMinutes(eMinutes);
-				// }
-				// else{
-				// 	eDate.setHours('0');
-				// 	eDate.setMinutes('00');
-				// }
-				// this.eventStartTimeSetting();
 				
 				db.collection('events').add(
 					{
@@ -349,25 +323,10 @@ export default {
                 		endDate: firebase.firestore.Timestamp.fromDate(this.eDate),
                 		classes: "birthday",
 						title: this.newEventTitle,
-						// id:
-						// 	"e" +
-						// 	Math.random()
-						// 		.toString(36)
-						// 		.substr(2, 10),
+
 					}
 				)
 				console.log(this.newEventStartTime)
-            //     this.events.push({
-			// 	startDate: this.newEventStartDate,
-            //     endDate: this.newEventEndDate,
-            //     classes: "birthday",
-			// 	title: this.newEventTitle,
-			// 	// id:
-			// 	// 	"e" +
-			// 	// 	Math.random()
-			// 	// 		.toString(36)
-			// 	// 		.substr(2, 10),
-			// })
             }
             else{
 
@@ -579,10 +538,15 @@ body {
 .cal .select{
 	width: 150%;
 }
-
 .calendar-parent {
-	font-size: 2.5vw;
+	font-size: 3.5vw;
 }
+
+.cv-day-number::before{
+	font-size: 2.6vw;
+}
+
+
 
 }
 </style>

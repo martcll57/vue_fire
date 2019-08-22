@@ -10,16 +10,24 @@ import './assets/bootstrap.min.css'
 import App from './App'
 import router from './router'
 import moment from 'moment'
+import firebase from 'firebase'
 
 Vue.prototype.moment = moment
 
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
+let app = null;
+
+firebase.auth().onAuthStateChanged(() => {
 /* eslint-disable no-new */
-new Vue({
+if(!app){
+app = new Vue({
   el: '#app',
   router,
   components: { App },
   template: '<App/>'
+})
+}
+
 })

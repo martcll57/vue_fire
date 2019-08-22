@@ -1,35 +1,39 @@
 <template>
-  <div class="row">
+  <div class="row" style="margin:0; padding-bottom:10px;">
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <b-jumbotron header="Family Helper" lead="Organiser">
+          
     <p>Built by Martin Collins 2019 😧</p>
   </b-jumbotron>
-    <div>
-  <b-card-group deck>
-    <b-card title="Title" img-src="../assets/cal.jpeg" img-alt="Image" img-top>
+  <div class="row" style="margin:0;">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+  <b-card-group columns class="text-center">
+    <router-link to="/Calendar" style="text-decoration:none;">
+    <b-card title="Calendar" :img-src="require('../assets/paper.jpg')" img-height="200" img-width="200" img-alt="Image" img-top>
       <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.
+        Add upcoming events
       </b-card-text>
-      <div slot="footer"><small class="text-muted">Last updated 3 mins ago</small></div>
     </b-card>
-
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
+    </router-link>
+    <router-link to="/ShoppingList" style="text-decoration:none;">
+    <b-card title="Shopping List" :img-src="require('../assets/shoplist.jpg')" img-height="200" img-width="200" img-alt="Image" img-top>
       <b-card-text>
-        This card has supporting text below as a natural lead-in to additional content.
+       Make a Shopping List ...Kathy
       </b-card-text>
-      <div slot="footer"><small class="text-muted">Last updated 3 mins ago</small></div>
     </b-card>
-
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
+    </router-link>
+    <router-link to="/Todolist" style="text-decoration:none;">
+    <b-card title="To-Do List" :img-src="require('../assets/list.jpg')" img-height="200" img-width="200" img-alt="Image" img-top>
       <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.
+        Family To-Do List, get to work.
       </b-card-text>
-      <div slot="footer"><small class="text-muted">Last updated 3 mins ago</small></div>
     </b-card>
+    </router-link>
   </b-card-group>
+  </div>
+  <div class="col-md-1"></div>
 </div>
     </div>
     <div class="col-md-1"></div>
@@ -50,6 +54,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
 
 </style>
